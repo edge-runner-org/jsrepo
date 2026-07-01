@@ -38,7 +38,6 @@ exports.loginHandler = function (req, res, next) {
   if (validator.isEmail(req.body.username)) {
 
       if (users.length > 0) {
-        const redirectPage = req.body.redirectPage
         const session = req.session
         const username = req.body.username
         return adminLoginSuccess(redirectPage, session, username, res)
