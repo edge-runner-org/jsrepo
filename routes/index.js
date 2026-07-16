@@ -23,7 +23,7 @@ exports.index = function (req, res, next) {
   Todo.
     find({}).
     sort('-updated_at').
-    exec(function (err, todos) {
+
       if (err) return next(err);
 
       res.render('index', {
