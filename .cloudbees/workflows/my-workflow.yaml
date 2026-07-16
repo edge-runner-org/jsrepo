@@ -35,6 +35,7 @@ jobs:
       - id: upload-binary
         name: Upload binary using action
         uses: cloudbees-io/asset-chain-utils-preprod/upload-binary@v1
+        continue-on-error: true 
         with:
           file-path: container-image.tar
           file-type: BINARY_CONTAINER
